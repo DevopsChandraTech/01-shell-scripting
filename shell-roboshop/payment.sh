@@ -1,0 +1,65 @@
+#!/bin/bash
+
+echo "the script start executed in $(date)"
+START_TIME=$(date +%s)
+
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
+
+
+USERID=$(id -u) # show user id
+
+if [ $USERID -ne 0 ]; then
+    echo "Error:: run command with root user privilizes" | tee -a $LOG_FILE
+    exit 1
+fi
+
+LOG_FOLDER="/var/log/shell-script"
+SCRIPT_NAME=$(echo $0 | awk -F "." '{print $1}')
+LOG_FILE="$LOG_FOLDER/$SCRIPT_NAME.log"
+SCRIPT_DIR=$PWD
+
+mkdir -p $LOG_FOLDER
+
+VALIDATE(){
+    if [ $1 -ne 0 ]; then
+        echo "Error:: command not found" &>> $LOG_FILE
+        exit 1
+    else
+        echo -e "$2 $G Success.$N" | tee -a $LOG_FILE
+    fi
+}
+
+dnf install python3 gcc python3-devel -y &>> $LOG_FILE
+VALIDATE $? "Installing Python"
+id roboshop &>> $LOG_FILE
+if [ $? -ne 0 ]; then   
+    useradd --system --home /app --shell /sbin/nologin --comment "roboshop system user" roboshop &>> $LOG_FILE
+else
+    echo -e "roboshop already exists $Y Skipping..!$N"
+fi
+
+mkdir -p /app &>> $LOG_FILE
+VALIDATE $? "Create Directory"
+curl -L -o /tmp/payment.zip https://roboshop-artifacts.s3.amazonaws.com/payment-v3.zip  &>> $LOG_FILE
+VALIDATE $? "Download Code"
+cd /app &>> $LOG_FILE
+VALIDATE $? "Change Directory"
+rm -rf /app/*
+VALIDATE $? "Remove previous code"
+unzip /tmp/payment.zip &>> $LOG_FILE
+VALIDATE $? "Unzip code"
+cd /app &>> $LOG_FILE
+VALIDATE $? "Change app directory"
+pip3 install -r requirements.txt &>> $LOG_FILE
+VALIDATE $? "Installing Requirments"
+systemctl daemon-reload &>> $LOG_FILE
+VALIDATE $? "daemon-reload"
+cp /$SCRIPT_DIR/payment.service /etc/systemd/system/payment.service
+VALIDATE $? "Copying Payment Service"
+systemctl enable payment &>> $LOG_FILE
+VALIDATE $? "Enable service"
+systemctl restart payment &>> $LOG_FILE
+VALIDATE $? "Start Service"
