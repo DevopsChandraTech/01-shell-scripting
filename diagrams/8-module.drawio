@@ -1,0 +1,52 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="eMyOaQ5xP884JLxd0hvL">
+    <mxGraphModel dx="774" dy="469" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bFm3NdMzxhi-eASnR_b7-3" edge="1" parent="1" source="bFm3NdMzxhi-eASnR_b7-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="bFm3NdMzxhi-eASnR_b7-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bFm3NdMzxhi-eASnR_b7-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#f8cecc;strokeColor=#b85450;" value="&lt;b&gt;Script-1&lt;/b&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="80" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bFm3NdMzxhi-eASnR_b7-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;b&gt;Script-2&lt;/b&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="480" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bFm3NdMzxhi-eASnR_b7-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;PID - 1234&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="110" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="bFm3NdMzxhi-eASnR_b7-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;PID - 3456&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="510" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="bFm3NdMzxhi-eASnR_b7-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="&lt;ol&gt;&lt;li&gt;script-1 and script-2 both are different&lt;/li&gt;&lt;li&gt;both PID of scripts are also different&lt;/li&gt;&lt;li&gt;variables not accessing calling one script to another script&lt;/li&gt;&lt;/ol&gt;" vertex="1">
+          <mxGeometry height="30" width="300" x="180" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="bFm3NdMzxhi-eASnR_b7-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#f8cecc;strokeColor=#b85450;" value="" vertex="1">
+          <mxGeometry height="210" width="270" x="50" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="bFm3NdMzxhi-eASnR_b7-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;Script-1&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="70" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="bFm3NdMzxhi-eASnR_b7-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;PID : 1234&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="70" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="bFm3NdMzxhi-eASnR_b7-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;b&gt;Script-2&lt;/b&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="170" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="bFm3NdMzxhi-eASnR_b7-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;PID : 1234&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="200" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="bFm3NdMzxhi-eASnR_b7-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="calling sh script-1 to scipt-2" vertex="1">
+          <mxGeometry height="30" width="190" x="240" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bFm3NdMzxhi-eASnR_b7-13" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="calling source script-1 to scipt-2" vertex="1">
+          <mxGeometry height="30" width="190" x="400" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="bFm3NdMzxhi-eASnR_b7-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="&lt;ol&gt;&lt;li&gt;sourcing is checks script source directory&lt;/li&gt;&lt;li&gt;echo $PATH --- everyscript checks this directory for running the script&lt;/li&gt;&lt;/ol&gt;" vertex="1">
+          <mxGeometry height="30" width="340" x="320" y="320" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
